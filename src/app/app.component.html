@@ -1,0 +1,125 @@
+<style>
+  :host {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .spacer {
+    flex: 1;
+  }
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+
+ footer {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+  }
+
+  footer a {
+    display: flex;
+    align-items: center;
+  }
+
+ .vote{
+	width: 81px;
+	float : right;
+	margin-right : 0px;
+}
+
+.welcome{
+	margin-left: 34px;
+    font-size: 20px;
+ }
+.otp{
+    margin-right: 104px;
+}
+.btn-w{
+	 margin-top: 70px;
+    margin-right: 84px;
+}
+.v{
+	left: 50px;
+position: relative;
+}
+
+</style>
+
+<div class="toolbar">
+ 
+  <span class="welcome" >Welcome Voter</span>
+    <div class="spacer">
+      <img src="assets/img/lostVotes.png" class="vote" title="Lost Vote" alt="lost-Votes-Logo">
+	</div>
+</div>
+
+<div class="content" role="main">
+
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" style="margin-top: 65px;">
+    <div class="form-group">
+        <label for="username" style="margin-right: 22px; ">Aadhaar Number </label>
+        <input type="text" formControlName="username" class="form-control"  />
+    </div>
+    <div class="form-group" style="margin-top: 22px;">
+        <label for="password" class="otp">OTP</label>
+        <input type="password" formControlName="password" class="form-control"  />
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-w btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Login
+        </button>
+        <a routerLink="/register" class="btn btn-link">Register</a>
+    </div>
+
+</form>
+<div>
+<table class="my-table" style="margin-top: 76px;">
+  <thead class="my-table headers">
+    <tr>
+      <th style="width: 124px;">Sr. No.</th>
+<th style="width: 124px;">Party Name</th>
+<th style="width: 124px;"> Party Symbol</th>
+<th style="width: 124px;">Vote </th>
+    </tr>
+  </thead>
+  <tbody class="my-table body">
+   <tr>
+<td class="v">1</td><td class="v">Party X</td><td class="v">Car</td><td class="v"><input type="checkbox" checked value="true"/> </td></tr><tr>
+<td class="v">2</td><td class="v">Party Y</td><td class="v">Cycle</td><td class="v"><input type="checkbox" value="true"/> </td></tr><tr>
+<td class="v">3</td><td class="v">Party Z</td><td class="v">Bike</td><td class="v"><input type="checkbox" value="true"/> </td></tr><tr>
+<td class="v">4</td><td class="v">Party A</td><td class="v">Scooter</td><td class="v"><input type="checkbox" value="true"/> </td></tr>
+  </tbody>
+</table>
+   
+</div>
