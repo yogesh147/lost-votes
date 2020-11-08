@@ -10,4 +10,4 @@ Note:- please install angular-cli environment and other node modules to run proj
 
 1) Any voter of India give vote from any country.
 2) There will be no any vote lost. 
-3) Data is fully secure and encrypted.
+3) Data is fully secured and encrypted.
