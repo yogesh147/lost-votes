@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 	submitted = false;
 	returnUrl: string;
 
- headers = ["ID", "Name", "Age", "Gender", "Country"];
+  headers = ["ID", "Name", "Age", "Gender", "Country"];
 
   rows = [
     {
