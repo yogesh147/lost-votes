@@ -20,7 +20,6 @@ import {MatTableModule} from '@angular/material/table';
 		HttpClientModule,
 		BrowserAnimationsModule,
 		MatTableModule,
-		
 	],
 	providers: [],
 	bootstrap: [AppComponent],
